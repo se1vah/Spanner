@@ -31,7 +31,7 @@
         .form-container input,
         .form-container select,
         .form-container textarea {
-            width: 95%;
+            width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -69,13 +69,13 @@
         <h2>Bike Information</h2>
         <form>
             <label for="bikeNumber">Bike Number</label>
-            <input type="number" id="bikeNumber" name="bikeNumber" required>
+            <input type="text" id="bikeNumber" name="bikeNumber" required>
 
             <label for="bikeName">Bike Name</label>
             <input type="text" id="bikeName" name="bikeName" required>
 
             <label for="chasisNumber">Chasis Number</label>
-            <input type="number" id="chasisNumber" name="chasisNumber" required>
+            <input type="text" id="chasisNumber" name="chasisNumber" required>
 
             <label for="remarks">Remarks</label>
             <textarea id="remarks" name="remarks" rows="2"></textarea>
@@ -100,60 +100,65 @@
 
             <label for="bikeRSideImage">Bike Right Side Image</label>
             <input type="file" id="bikeRSideImage" name="bikeRSideImage" accept="image/*">
+        </form>
+    </div>
 
-            <!-- Bike Owner Information Form -->
-            <h2>Bike Owner Information</h2>
+    <!-- Bike Owner Information Form -->
+    <div class="form-container">
+        <h2>Bike Owner Information</h2>
+        <form>
             <label for="ownerName">Owner Name</label>
             <input type="text" id="ownerName" name="ownerName" required>
 
             <label for="contact">Contact</label>
-            <input type="number" id="contact" name="contact" required>
+            <input type="text" id="contact" name="contact" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
+        </form>
+    </div>
 
-            <!-- Service Requests Form -->
-            <h2>Service Requests</h2>
+    <!-- Service Requests Form -->
+    <div class="form-container">
+        <h2>Service Requests</h2>
+        <form>
             <label for="arrivedDate">Arrived Date</label>
             <input type="date" id="arrivedDate" name="arrivedDate" required>
 
-            <label for="deliveryDate">Delivery Date</label>
-            <input type="date" id="deliveryDate" name="deliveryDate" required>
+            <label for="estimatedDeliveryDate">Estimated Delivery Date</label>
+            <input type="date" id="estimatedDeliveryDate" name="estimatedDeliveryDate" required>
+            
+            <label for="actualDeliveryDate">Actual Delivery Date</label>
+            <input type="date" id="actualDeliveryDate" name="actualDeliveryDate">
 
             <label for="serviceCategory">Service Category</label>
-            <select id="serviceCategory" name="serviceCategory">
-                <option value="Engine Oil Change">Engine Oil Change</option>
-                <option value="General Service">General Service</option>
-                <option value="Make Engine Problem">Make Engine Problem</option>
-            </select>
+            <input type="text" id="serviceCategory" name="serviceCategory" required>
 
             <label for="serviceRemarks">Remarks</label>
             <textarea id="serviceRemarks" name="serviceRemarks" rows="2"></textarea>
 
             <label for="requestStatus">Request Status</label>
-            <select id="requestStatus" name="requestStatus">
-                <option value="Pending">Pending</option>
-                <option value="Hold">Hold</option>
-                <option value="Completed">Completed</option>
-            </select>
+            <input type="text" id="requestStatus" name="requestStatus">
 
             <label for="amount">Amount</label>
-            <input type="number" id="amount" name="amount" required>
+            <input type="text" id="amount" name="amount" required>
 
             <label for="advancedAmount">Advanced Amount</label>
-            <input type="number" id="advancedAmount" name="advancedAmount">
+            <input type="text" id="advancedAmount" name="advancedAmount">
 
             <label for="amountStatus">Amount Status</label>
             <select id="amountStatus" name="amountStatus">
                 <option value="Paid">Paid</option>
                 <option value="Pending">Pending</option>
             </select>
-
-            <div class="button-group">
-                <button type="submit" class="submit">Submit</button>
-                <button type="reset" class="reset">Reset</button>
-            </div>
         </form>
+    </div>
+
+    <div class="form-container">
+        <div class="button-group">
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
     </div>
 
 </body>
